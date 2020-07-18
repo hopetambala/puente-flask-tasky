@@ -15,7 +15,7 @@ Puente's Task and Messaging Management System built with [Flask](https://flask.p
 ## Build
 ### Install and create virtual environment library
 ```
-cd python/
+cd <root-folder>/
 pip install virtualenv #if you don't have virtualenv installed
 ```
 
@@ -29,7 +29,7 @@ Activate virtualenv
 source <Name_of_Virtual_Environment>/bin/activate
 ```
 ### Install project requirements
-Install project requirements usings the requirements.text
+Install project requirements usings the requirements.text once you're inside your virtual environment
 ```
 pip install -r requirements.txt
 ```
