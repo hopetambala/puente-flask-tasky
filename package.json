@@ -1,14 +1,16 @@
 {
   "name": "puente-flask-tasky",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "python app.py",
     "coverage": "codecov --token='TOKENTOKENTOKEN'",
     "create-database": "rm db/tasky.db && python db/database.py",
     "pre-commit-install": "pre-commit install",
-    "pre-commit-run":"pre-commit run --all-files",
-    "reinstall": "rm -rf venv/ && virtualenv venv && pip install -r requirements.txt",
+    "pre-commit-run": "pre-commit run --all-files",
+    "pip-freeze-requirements": "pip freeze > requirements.txt",
+    "pip-install-requirements": "pip install -r requirements.txt",
+    "reinstall": "rm -rf venv/ && virtualenv venv && npm run pip-install-requirements",
     "gh-prune": "git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done",
     "release": "standard-version"
   },
