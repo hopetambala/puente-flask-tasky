@@ -6,7 +6,8 @@
     "start": "python app.py",
     "coverage": "codecov --token='TOKENTOKENTOKEN'",
     "create-database": "rm db/tasky.db && python db/database.py",
-    "precommit-install": "pre-commit install",
+    "pre-commit-install": "pre-commit install",
+    "pre-commit-run":"pre-commit run --all-files",
     "reinstall": "rm -rf venv/ && virtualenv venv && pip install -r requirements.txt",
     "gh-prune": "git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done",
     "release": "standard-version"

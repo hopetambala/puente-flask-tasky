@@ -3,20 +3,20 @@
 [![codecov](https://codecov.io/gh/hopetambala/puente-flask-tasky/branch/master/graph/badge.svg)](https://codecov.io/gh/hopetambala/puente-flask-tasky)
 
 ## Description
-Puente's Task and Messaging Management System built with [Flask](https://flask.palletsprojects.com/en/1.1.x/). 
+Puente's Task and Messaging Management System built with [Flask](https://flask.palletsprojects.com/en/1.1.x/).
 
 ## Project Layout
 | Key Folder | Parent Folder | Description |
 | - | - | - |
-| db | root | Holds the database and database creation tools | 
-| models | root | Holds the main models and model methods for objects created in database | 
-| endpoints | root | Holds the resources we use to create API endpoints | 
+| db | root | Holds the database and database creation tools |
+| models | root | Holds the main models and model methods for objects created in database |
+| endpoints | root | Holds the resources we use to create API endpoints |
 
-## Build 
+## Build
 ### Install and create virtual environment library
 ```
 cd python/
-pip install virtualenv #if you don't have virtualenv installed 
+pip install virtualenv #if you don't have virtualenv installed
 ```
 
 Create virtualenv
@@ -47,7 +47,7 @@ GET /users _i.e. http://127.0.0.1:5000/users_
 
 GET /users/name _i.e. http://127.0.0.1:5000/users/name_
 
-DELETE /users/name 
+DELETE /users/name
 
 POST /register
 

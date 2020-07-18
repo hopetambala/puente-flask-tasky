@@ -9,7 +9,8 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 api = Api(app)
 
-@app.route('/')
+
+@app.route("/")
 def home():
     """
     This function just responds to the browser URL
@@ -19,11 +20,12 @@ def home():
     """
     return "Puente's Task and Messages Management API"
 
-api.add_resource(Task, '/tasks/<string:task_id>')
-api.add_resource(Tasks, '/tasks')
-api.add_resource(TasksWorkflow, '/taskworkflows/<string:task_id>')
-api.add_resource(TasksWorkflows, '/taskworkflows')
-api.add_resource(TasksByWorkflow,'/taskworkflows/tasks/<string:task_workflow_id>')
 
-if __name__ == '__main__':
+api.add_resource(Task, "/tasks/<string:task_id>")
+api.add_resource(Tasks, "/tasks")
+api.add_resource(TasksWorkflow, "/taskworkflows/<string:task_id>")
+api.add_resource(TasksWorkflows, "/taskworkflows")
+api.add_resource(TasksByWorkflow, "/taskworkflows/tasks/<string:task_workflow_id>")
+
+if __name__ == "__main__":
     app.run(debug=True)
