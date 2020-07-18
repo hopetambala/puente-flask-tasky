@@ -16,11 +16,12 @@ install:
 before_install:
   - sudo apt-get update
 #  - sudo apt-get install docker-ce
-after_success:
- - codecov
+# after_success:
+#  - codecov
 
 script:
   # - virtualenv venv
   # - source venv/bin/activate
   - python ./db/database.py
+  - codecov
   # - python app.py
